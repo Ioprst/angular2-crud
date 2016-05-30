@@ -9,7 +9,15 @@
         </thead>
     <tbody>
         <tr *ngFor="let row of rows">
-            <td *ngFor="let column of columns">{{getValue(row, column.key)}}</td>
+            <td *ngFor="let column of columns">{{getValue(column.key, row)}}</td>
+            <td>
+                <a data-toggle="modal" href="#" title="Редактировать" class="btn btn-primary btn-sm" data-target="#update-ess">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </a>
+                <a class="btn btn-danger btn-sm remove-ess" href="#" title="Удалить" data-model="1" >
+                    <span class="glyphicon glyphicon-remove"></span>
+                </a>
+            </td>
         </tr>
     </tbody>
 </table>

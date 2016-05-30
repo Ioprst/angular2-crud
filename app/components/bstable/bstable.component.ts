@@ -7,8 +7,11 @@ import {Component, Input} from '@angular/core';
 
 export class BsTableComponent {
     @Input() public columns = [];
-    @Input() public data = [];
+    @Input() public rows = [];
     constructor() {
+    }
+    getValue(column:string, row:any) {
+        return row[column];
     }
 }
 
