@@ -5,9 +5,10 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="table-wrapper">
-                <div class="table-actions">
-                        <bs-table [columns]="columns" [data]="data"></bs-table>
-                </div>
+                <p>
+                    <button type="button" (click)="add()" class="btn btn-success" href="#" data-toggle="modal" data-target="#new-ess">Создать</button>
+                </p>
+                <bs-table [columns]="columns" [rows]="rows"></bs-table>
             </div>
         </div>
     </div>
